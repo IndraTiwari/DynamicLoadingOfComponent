@@ -7,13 +7,17 @@ import { ChannelBaseComponent } from './channel-base/channel-base.component';
 import { ChannelOneComponent } from './channel-base/channel-one/channel-one.component';
 import { ChannelTwoComponent } from './channel-base/channel-two/channel-two.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ZeroValidatorDirective } from './directives/zero-validator.directive';
+import { OnlyNumberDirective } from './directives/only-number.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChannelBaseComponent,
     ChannelOneComponent,
-    ChannelTwoComponent
+    ChannelTwoComponent,
+    ZeroValidatorDirective,
+    OnlyNumberDirective
   ],
   imports: [
     BrowserModule,

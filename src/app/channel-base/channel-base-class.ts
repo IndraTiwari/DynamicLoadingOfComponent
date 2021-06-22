@@ -59,7 +59,7 @@ export class ChannelBaseClass implements OnInit {
       });
     }
   }
-
+//   https://stackblitz.com/edit/angular-disabled-8xpu5t?file=app%2Fonly-number.directive.ts
   // checking no space
   noSpacerule(fieldValue: FormControl): ValidationErrors {
     if (fieldValue && fieldValue.value) {
