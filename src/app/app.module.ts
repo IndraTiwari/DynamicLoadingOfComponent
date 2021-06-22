@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ChannelBaseComponent } from './channel-base/channel-base.component';
 import { ChannelOneComponent } from './channel-base/channel-one/channel-one.component';
 import { ChannelTwoComponent } from './channel-base/channel-two/channel-two.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { ChannelTwoComponent } from './channel-base/channel-two/channel-two.comp
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[ChannelBaseComponent],
   entryComponents: [ChannelBaseComponent, ChannelOneComponent, ChannelTwoComponent],

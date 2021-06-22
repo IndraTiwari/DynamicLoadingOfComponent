@@ -1,2 +1,32 @@
-<p>channel-one works!</p>
 <h1>Admin View</h1>
+<form [formGroup]="customerForm">
+    <div>
+      <input formControlName="firstName">
+      <label class="dots">First Name</label>
+      <span *ngIf="customerForm.controls['firstName'].hasError('required')">
+      please enter first name
+      </span>
+    </div>
+    <div>
+      <input formControlName="lastName">
+      <label>LastName</label>
+      <span *ngIf="customerForm.controls['lastName'].hasError('required')">
+      please enter last name
+      </span>
+    </div>
+    <div>
+      <input formControlName="email">
+      <label>Email</label>
+      <span *ngIf="customerForm.controls['email'].hasError('required')">
+      please enter email
+      </span>
+      <span *ngIf="customerForm.controls['email'].hasError('pattern') ">please enter proper email</span>
+    </div>
+    <div>
+      <input formControlName="age" zeroValidator onlynumber>
+      <label>Age</label>
+    </div>
+    <div>
+      <button type="button" (click)="onSubmit()">Submit</button>
+    </div>
+  </form>
